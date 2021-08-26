@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tu dien</title>
+</head>
+<body style="text-align: center">
+<div>
+    <input id="boxInput" placeholder="Enter here" type="text"/>
+    <button onclick="translate()" type="button">Translate</button>
+</div>
+<script>
+    function translate() {
+        let english = ["computer", "television", "issues", "repository", "thai"];
+        let vietnamese = ["máy tính", "tivi", "vấn đề", "kho", "địp troai"];
+        let nhap = document.getElementById("boxInput").value;
+        let check = false;
+        for (let i = 0; i < english.length; i++) {
+            if (nhap === english[i]) {
+                alert(vietnamese[i])
+                check = true;
+                break;
+            }
+        }
+        if (check === false) {
+            alert("not")
+        }
+    }
+</script>
+</body>
+</html>
